@@ -1,0 +1,69 @@
+Backend Development with python
+
+.....Django......
+
+To start a project
+django-admin  startproject <projectname>
+ 
+...GET and POST in Django...
+We use two type of method, that is the get or post 
+method.
+
+GET:-- are mostly used whwnever we are not passing any
+sensitive information.
+
+POST:-- is used when we have sentitive information
+it is more safe to use.
+
+CSRF token-- CROSS SITE REQUEST FORWARDING django offers
+the csrf token when we used to post method to prevent attacks
+
+in django, we store html files in templates and css files
+and other static files in static folder.
+
+import os gets the operating system we are working on
+
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'))
+add to setting.py for static folder.
+
+before we can can use the static, we have to load it
+{% load static %}
+
+....Introduction to Django Models....
+we create a class in our model.py file and after making changes in the file,
+we add our app to settings.py and we run makemigrations and migrate 
+note:- run makemigrations and migrate aftere each change in models.py
+
+....Django Admin Panel & Manipulation of Database....
+
+we user python manage.py createsuperuser to create an admin user
+
+admin.py file is where we register our models
+
+....User Authentication and Registration in Django....
+
+
+to check if email or username exists in our database
+ if User.objects.filter(email=email).exists():
+                messages.info(request, "Email Already Used")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
